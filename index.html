@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50,5A45,45 0 1,0 95,50 45,45 0 0,0 50,5M50,15A35,35 0 1,1 15,50 35,35 0 0,1 50,15z' fill='%23F43F5E'/%3E%3Ccircle cx='50' cy='50' r='20' fill='%230EA5E9'/%3E%3C/svg%3E" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AuraLens - AI Sentiment Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Explicitly configure Tailwind to use the 'class' strategy for dark mode.
+      // This ensures the theme toggle functions correctly with the CDN build.
+      tailwind.config = {
+        darkMode: 'class',
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.3.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0",
+    "jspdf": "https://aistudiocdn.com/jspdf@^2.5.0",
+    "jspdf-autotable": "https://aistudiocdn.com/jspdf-autotable@^3.8.0"
+  }
+}
+</script>
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+</style>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-50 dark:bg-slate-950">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
